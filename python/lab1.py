@@ -46,32 +46,39 @@ print("")
 n= len(name)
 
 i=0
+
 letter = input("please enter a letter: ")
-if len(letter)==1:
+if len(letter)>=1:
     responded = True
 
+
 while True:
+
     if len(letter)==0:
         break
     if n==0 :
-     print("letter is not the part of the name")
-     break
+        print("letter is not the part of the name")
+        break
     if letter == name[i]:
-      print(f"your name has the letter {letter}")  
-      break
-    else :
-        print(f"your name does not have the {letter}")
+        print(f"your name has the letter {letter}")  
         break
-    if i<n:
-     i+=1
+
+    if i<n-1:
+        i+=1
+    
     else:
+        print(f'your name doesnot contain letter {letter}')
         break
+    
+    
+        
 
 """
 or just write 
- if letter in name:
+
+if letter in name:
     print(f"your name has the leter {letter}")
-else
+else:
     print(f"your name doesnot have letter {letter}")
 """
 if responded:
